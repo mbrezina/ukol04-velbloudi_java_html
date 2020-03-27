@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:text-align="http://www.w3.org/1999/xhtml" lang="cs"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="My lovely web page"/>
+    <meta name="robots" content="index, follow"/>
+    <meta name="keywords" content="java, web"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Kolik velbloudů za ženu</title>
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i|Raleway:400,400i,700,700i&amp;subset=latin-ext"
+          rel="stylesheet"/>
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css" th:href="${'css/bootstrap.min.css'}"/>
+
+    <link rel="shortcut icon" href="../static/images/dog_ico" type="image/x-icon" th:href="${'images/dog_ico'}"/>
+    <script>
+        var slider = document.getElementById("myRange");
+        var output = document.getElementById("demo");
+        output.innerHTML = slider.value; // Display the default slider value
+        // Update the current slider value (each time you drag the slider handle)
+        slider.oninput = function () {
+            output.innerHTML = this.value;
+
+
+        }
+    </script>
+
+
+</head>
+
+<body>
+
+<div th:insert="fragments/menu :: menu">menu</div>
+
+<div class="container">
+    <div class="jumbotron">
+        <br>
+        <h2>Kolik velbloudů za Vaši partnerku? </h2>
+        <br>
+        <form method="post">
+            <div>
+                <div class="range_form">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Jaké je její jméno?</label>
+                        <input class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                               placeholder="Jméno" name="jmeno">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                            else.</small>
+                    </div>
+                    <br>
+                    <div class="card text-white bg-success mb-3">
+                        <div class="card-header">Velikost nohy</div>
+                        <div class="card-body">
+                            <img src="images/klompen.jpeg" alt="ilustrace" class="obrazek_pexesa">
+                            <p class="card-text">Velikost nohy je zásadní při plánování společné domácnosti. Čím větší
+                                noha, tím více místa je třeba při plánování společné domácnosti. Nastavte výšku na
+                                liště.</p>
+                            <input type="range" id="fromPrice" value="40" min="35" max="45" class="custom-range" name="velikostBot"
+                                   oninput="document.getElementById('fPrice').innerHTML = this.value"/>
+                            <p>Velikost <label id="fPrice">35</label></p>
+                        </div>
+
+                    </div>
+                    <br>
+                    <div class="card text-white bg-info mb-3" style="max-width: 250rem;">
+                        <div class="card-header">Výška</div>
+                        <div class="card-body">
+                            <img src="images/prav.jpg" alt="ilustrace" class="obrazek_pexesa">
+                            <p class="card-text">Co je malé, to je hezké, co je větší, to je lepší. Nastavte opět výšku
+                                na liště.</p>
+
+                            <input type="range" value="167" min="145" max="190" class="custom-range"
+                                   name="vyska" oninput="document.getElementById('tPrice').innerHTML = this.value"/>
+                            <p><label id="tPrice">167</label> cm</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card text-white bg-warning mb-3" style="max-width: 150rem;">
+                    <div class="card-header">Barva jejích očí</div>
+                    <div class="card-body">
+                        <img src="images/oko.jpg" alt="ilustrace" class="obrazek_pexesa">
+                        <p class="card-text">Oko, do duše okno. Vyberte barvu jejích očí ze seznamu.</p>
+                        <select name="barvaOci" class="form-control">
+                            <option value="0">Vyberte ze seznamu jednu možnost</option>
+                            <option value="7">Modrá</option>
+                            <option value="5">Hnědá</option>
+                            <option value="6">Šedá</option>
+                            <option value="2">Zelená</option>
+                            <option value="4">Šedozelená</option>
+                        </select>
+                    </div>
+                </div>
+                <br>
+                <div class="card text-white bg-primary mb-3" style="max-width: 150rem;">
+                    <div class="card-header">Její nejoblíbenější dopravní prostředek</div>
+                    <div class="card-body">
+                        <img src="images/nijn.jpg" alt="operating system" class="obrazek_pexesa">
+                        <p class="card-text">Vyberte pouze jednu možnost.</p>
+                        <div class="form-check">
+                            <label class="form-check-label" for="salina">
+                                <input type="radio" class="form-check-input" name="dopravniProstredek"
+                                       id="salina"
+                                       value="6">
+                                Šalina
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label" for="auto">
+                                <input type="radio" class="form-check-input" name="dopravniProstredek"
+                                       id="auto"
+                                       value="2">
+                                Auto
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label" for="letadlo">
+                                <input type="radio" class="form-check-input" name="dopravniProstredek"
+                                       id="letadlo"
+                                       value="0">
+                                Letadlo
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label" for="pesky">
+                                <input type="radio" class="form-check-input" name="dopravniProstredek"
+                                       id="pesky"
+                                       value="9">
+                                Chodí pěšky
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label" for="kolo">
+                                <input type="radio" class="form-check-input" name="dopravniProstredek"
+                                       id="kolo"
+                                       value="10">
+                                Kolo
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="card bg-light mb-3" style="max-width: 150rem;">
+                    <div class="card-header">Další informace</div>
+                    <div class="card-body">
+                        <img src="images/tulip.jpg" alt="ilustrace" class="obrazek_pexesa">
+                        <p class="card-text">Při vyčíslování hodnoty ve velbloudech hrají roli i zdánlivě nepodstatné
+                            detaily. Můžete vybrat, kolik možností chcete.</p>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox" value="1" name="krecek">
+                                Má křečka
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox" value="10" name="lego">
+                                Ráda staví Lego
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox" value="6" name="java">
+                                Programuje v Javě
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox" value="8" name="hory">
+                                Ráda chodí po horách
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox" value="10" name="srdce">
+                                Má dobré srdce
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox" value="9" name="sranda">
+                                Je s ní sranda
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <input type="submit" id="tlacitko" class="btn btn-info" value="Spočítat velbloudy">
+        </form>
+
+
+        <!--            <div th:each="jmenoObrazku : ${seznamFotekKocekPsu}">
+
+                        <img src="../static/images/animals/kocka_1.jpg"
+                             th:src="@{'/images/animals/' + ${jmenoObrazku.getNazevSouboru()}}"
+                             class="obrazek_kocka_pes" alt="zviřátko"/>
+                        <label class="custom-radio">Kočka</label></input>
+                        <input th:name="'obrazek[' + ${(jmenoObrazkuStat.count-1)} + ']'" type="radio" value="kočka">
+
+                        <br>
+                        <label class="custom-radio">Pes</label></input>
+                        <input th:name="'obrazek[' + ${(jmenoObrazkuStat.count-1)} + ']'" type="radio" value="pes">
+
+                        <br><br>
+                    </div>-->
+
+
+    </div>
+    <footer class="paticka">
+        <br>
+        <div>
+            <p th:insert="fragments/footer :: footer">Footer</p>
+        </div>
+    </footer>
+</div>
+</body>
+<!--<script src="scripts/script.js"></script>-->
+</html>
+
+
