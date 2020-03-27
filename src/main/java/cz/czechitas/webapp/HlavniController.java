@@ -43,6 +43,12 @@ public class HlavniController {
     public ModelAndView zpracujZenu(ZenaForm vstup) {
         ModelAndView data = new ModelAndView("vysledek");
         Integer pocetVelbloudu = 0;
+        String osloveni = "Vaše partnerka ";
+
+        System.out.println("je to pravda: " + vstup.getJmeno().isEmpty());
+        if (!vstup.getJmeno().isEmpty()) {
+            osloveni += vstup.getJmeno();
+        }
 
         if (vstup.getVyska() < 160 || vstup.getVyska() > 180) {
             pocetVelbloudu += 3;
@@ -55,36 +61,13 @@ public class HlavniController {
         } else {
             pocetVelbloudu += 5;
         }
+        System.out.println("jméno je: " + vstup.getJmeno());
 
         pocetVelbloudu += vstup.getDopravniProstredek() + vstup.getBarvaOci() + vstup.getHory() +
-        vstup.getJava() + vstup.getSrdce() + vstup.getSranda() + vstup.getKrecek() + vstup.getLego();
+                vstup.getJava() + vstup.getSrdce() + vstup.getSranda() + vstup.getKrecek() + vstup.getLego();
 
         data.addObject("velbloudi", pocetVelbloudu);
-
-        data.addObject("jmeno", vstup.getJmeno());
+        data.addObject("jmeno", osloveni);
         return data;
-
-
-
-/*
-        List<Hodnoceni> konecnyVysledek = new ArrayList<>();
-
-        //hranaté závory se používají pouzeu polí, u listů je to .get(index)
-
-        for (int j=0; j < souboryKockyPsi.size(); j++) {
-            System.out.println(seznamOdpovedi.get(j));
-            System.out.println(souboryKockyPsi.get(j).getZvire());
-            if (seznamOdpovedi.get(j).equals(souboryKockyPsi.get(j).getZvire())) {
-
-             konecnyVysledek.add(new Hodnoceni(seznamOdpovedi.get(j), souboryKockyPsi.get(j).getZvire(), "form-group has-success", "form-control is-valid", "valid-feedback", "Správně"));
-         }
-         else  {
-             konecnyVysledek.add(new Hodnoceni(seznamOdpovedi.get(j), souboryKockyPsi.get(j).getZvire(), "form-group has-danger", "form-control is-invalid", "invalid-feedback", "Špatně"));
-         }
-
-            System.out.println(konecnyVysledek);
-        }*/
-
-
     }
 }

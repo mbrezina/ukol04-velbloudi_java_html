@@ -11,6 +11,8 @@ public class ZenaForm {
     private Integer java = 0;
     private Integer srdce = 0;
     private Integer sranda = 0;
+    private String jmeno = "Olívie";
+
 
     public void setKrecek(Integer krecek) {
         this.krecek = krecek;
@@ -75,8 +77,6 @@ public class ZenaForm {
     public Integer getVelikostBot() {
         return velikostBot;
     }
-
-    private String jmeno;
 
     public void setDopravniProstredek(Integer dopravniProstredek) {
         this.dopravniProstredek = dopravniProstredek;
