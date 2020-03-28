@@ -13,7 +13,6 @@ public class ZenaForm {
     private Integer sranda = 0;
     private String jmeno = "Olívie";
 
-
     public void setKrecek(Integer krecek) {
         this.krecek = krecek;
     }

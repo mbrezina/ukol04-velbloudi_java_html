@@ -43,10 +43,12 @@
             <div>
                 <div class="range_form">
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Jaké je její jméno?</label>
-                        <input class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                               placeholder="Jméno" name="jmeno">
-                        <small id="emailHelp" class="form-text text-muted">Bez jména se formulář neodešle</small>
+                        <label for="InputJmeno">Jaké je její jméno?</label>
+                        <!--<input th:class="${jmeno_feedback}"  id="InputJmeno" aria-describedby="nameHelp"
+                               name="jmeno">-->
+                        <input class="form-control" th:class="'form-control ' + ${jmeno_feedback}"  id="InputJmeno" aria-describedby="nameHelp"
+                               name="jmeno">
+                        <small id="nameHelp" class="form-text text-muted">Bez jména se formulář neodešle, ve jméně jsou povolená pouze písmena české abecedy.</small>
                     </div>
                     <br>
                     <div class="card text-white bg-success mb-3">
@@ -58,7 +60,7 @@
                                 liště.</p>
                             <input type="range" id="fromPrice" value="40" min="35" max="45" class="custom-range" name="velikostBot"
                                    oninput="document.getElementById('fPrice').innerHTML = this.value"/>
-                            <p>Velikost <label id="fPrice">35</label></p>
+                            <p>Velikost <label id="fPrice">40</label></p>
                         </div>
 
                     </div>
@@ -81,13 +83,13 @@
                     <div class="card-body">
                         <img src="images/oko.jpg" alt="ilustrace" class="obrazek_pexesa">
                         <p class="card-text">Oko, do duše okno. Vyberte barvu jejích očí ze seznamu.</p>
-                        <select name="barvaOci" class="form-control">
+                        <select name="barvaOci" class="form-control" required>
                             <option value="0">Vyberte ze seznamu jednu možnost</option>
-                            <option value="7">Modrá</option>
-                            <option value="5">Hnědá</option>
-                            <option value="6">Šedá</option>
-                            <option value="2">Zelená</option>
-                            <option value="4">Šedozelená</option>
+                            <option value="Modrá">Modrá</option>
+                            <option value="Hnedá">Hnědá</option>
+                            <option value="Šedá">Šedá</option>
+                            <option value="Zelená">Zelená</option>
+                            <option value="Šedozelená">Šedozelená</option>
                         </select>
                     </div>
                 </div>
@@ -98,10 +100,10 @@
                         <img src="images/nijn.jpg" alt="operating system" class="obrazek_pexesa">
                         <p class="card-text">Vyberte pouze jednu možnost.</p>
                         <div class="form-check">
-                            <label class="form-check-label" for="salina">
+                            <label class="form-check-label" for="šalina">
                                 <input type="radio" class="form-check-input" name="dopravniProstredek"
-                                       id="salina"
-                                       value="6">
+                                       id="šalina"
+                                       value="šalina" th:checked="${salina_checked}">
                                 Šalina
                             </label>
                         </div>
@@ -109,7 +111,7 @@
                             <label class="form-check-label" for="auto">
                                 <input type="radio" class="form-check-input" name="dopravniProstredek"
                                        id="auto"
-                                       value="2">
+                                       value="auto" th:checked="${letadlo_checked}">
                                 Auto
                             </label>
                         </div>
@@ -117,7 +119,7 @@
                             <label class="form-check-label" for="letadlo">
                                 <input type="radio" class="form-check-input" name="dopravniProstredek"
                                        id="letadlo"
-                                       value="0">
+                                       value="letadlo" th:checked="${letadlo_checked}">
                                 Letadlo
                             </label>
                         </div>
@@ -125,7 +127,7 @@
                             <label class="form-check-label" for="pesky">
                                 <input type="radio" class="form-check-input" name="dopravniProstredek"
                                        id="pesky"
-                                       value="9">
+                                       value="pesky" th:checked="${pesky_checked}">
                                 Chodí pěšky
                             </label>
                         </div>
@@ -133,7 +135,7 @@
                             <label class="form-check-label" for="kolo">
                                 <input type="radio" class="form-check-input" name="dopravniProstredek"
                                        id="kolo"
-                                       value="10">
+                                       value="kolo">
                                 Kolo
                             </label>
                         </div>
