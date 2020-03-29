@@ -1,6 +1,11 @@
 package cz.czechitas.webapp;
 
+import javax.validation.constraints.Pattern;
+
 public class ZenaForm {
+    @Pattern(regexp = "[a-zA-Zá-žÁ-Ž]+", message = "Jméno je povinné, používejte pouze písmena české abecedy")
+    private String jmeno;
+
     private Integer dopravniProstredek = 0;
     private Integer barvaOci = 0;
     private Integer vyska = 0;
@@ -11,8 +16,6 @@ public class ZenaForm {
     private Integer java = 0;
     private Integer srdce = 0;
     private Integer sranda = 0;
-    private String jmeno = "Olívie";
-
 
     public void setKrecek(Integer krecek) {
         this.krecek = krecek;
