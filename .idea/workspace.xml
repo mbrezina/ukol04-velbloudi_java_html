@@ -4,9 +4,6 @@
     <list default="true" id="f83d5eef-66a3-4693-99bf-9adfb56c57d8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cz/czechitas/webapp/HlavniController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/czechitas/webapp/HlavniController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cz/czechitas/webapp/ZenaForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/czechitas/webapp/ZenaForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/vysledek.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/vysledek.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/zena.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/zena.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

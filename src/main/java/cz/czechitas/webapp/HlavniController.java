@@ -49,12 +49,9 @@ public class HlavniController {
 
         ///////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////////
-        Integer vyska = Integer.parseInt(vyplnenyFormular.getVelikostBot());
-        Integer velikostBot = Integer.parseInt(vyplnenyFormular.getVyska();
-        Integer velikostBot = Integer.parseInt(vyplnenyFormular.getVyska();
-        Integer velikostBot = Integer.parseInt(vyplnenyFormular.getVyska();
-        Integer velikostBot = Integer.parseInt(vyplnenyFormular.getVyska();
-        Integer velikostBot = Integer.parseInt(vyplnenyFormular.getVyska();
+
+        Integer vyska = Integer.parseInt(vyplnenyFormular.getVyska());
+        Integer velikostBot = Integer.parseInt(vyplnenyFormular.getVelikostBot());
 
 
         if (vyplnenyFormular.getVyska() < 160 || vyplnenyFormular.getVyska() > 180) {
