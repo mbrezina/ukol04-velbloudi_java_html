@@ -56,7 +56,11 @@
                             <p class="card-text">Velikost nohy je zásadní při plánování společné domácnosti. Čím větší
                                 noha, tím více místa je třeba při plánování společné domácnosti. Nastavte výšku na
                                 liště.</p>
-                            <input type="range" id="fromPrice" value="40" min="35" max="45" class="custom-range" name="velikostBot"
+
+                            <!--/*@thymesVar id="formular" type="org.springframework.web.bind.annotation.ModelAttribute"*/-->
+                            <!--/*@thymesVar id="velikostBot" type="java.lang.Integer"*/-->
+
+                            <input type="range" id="fromPrice" value="40" min="35" max="45" class="custom-range" name="velikostBot" th:field="${formular.velikostBot}"
                                    oninput="document.getElementById('fPrice').innerHTML = this.value"/>
                             <p>Velikost <label id="fPrice">40</label></p>
                         </div>
@@ -190,22 +194,6 @@
         </form>
 
 
-        <!--            <div th:each="jmenoObrazku : ${seznamFotekKocekPsu}">
-
-                        <img src="../static/images/animals/kocka_1.jpg"
-                             th:src="@{'/images/animals/' + ${jmenoObrazku.getNazevSouboru()}}"
-                             class="obrazek_kocka_pes" alt="zviřátko"/>
-                        <label class="custom-radio">Kočka</label></input>
-                        <input th:name="'obrazek[' + ${(jmenoObrazkuStat.count-1)} + ']'" type="radio" value="kočka">
-
-                        <br>
-                        <label class="custom-radio">Pes</label></input>
-                        <input th:name="'obrazek[' + ${(jmenoObrazkuStat.count-1)} + ']'" type="radio" value="pes">
-
-                        <br><br>
-                    </div>-->
-
-
     </div>
     <footer class="paticka">
         <br>
@@ -215,7 +203,6 @@
     </footer>
 </div>
 </body>
-<!--<script src="scripts/script.js"></script>-->
 </html>
 
 

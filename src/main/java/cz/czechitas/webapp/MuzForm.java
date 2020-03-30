@@ -2,23 +2,23 @@ package cz.czechitas.webapp;
 
 import javax.validation.constraints.Pattern;
 
-public class ZenaForm {
+public class MuzForm {
     @Pattern(regexp = "[a-zA-Zá-žÁ-Ž]+", message = "Jméno je povinné, používejte pouze písmena české abecedy")
     private String jmeno;
 
     private int dopravniProstredek = 0;
-    private int barvaOci = 0;
+    private int barvaAuta = 0;
     private int vyska = 0;
     private int velikostBot = 0;
-    private int krecek = 0;
+    private int motorka = 0;
     private int lego = 0;
     private int hory = 0;
-    private int java = 0;
+    private int cpp = 0;
     private int srdce = 0;
     private int sranda = 0;
 
-    public void setKrecek(int krecek) {
-        this.krecek = krecek;
+    public void setMotorka(int motorka) {
+        this.motorka = motorka;
     }
 
     public void setLego(int lego) {
@@ -29,8 +29,8 @@ public class ZenaForm {
         this.hory = hory;
     }
 
-    public void setJava(int java) {
-        this.java = java;
+    public void setCpp(int cpp) {
+        this.cpp = cpp;
     }
 
     public void setSrdce(int srdce) {
@@ -41,8 +41,8 @@ public class ZenaForm {
         this.sranda = sranda;
     }
 
-    public int getKrecek() {
-        return krecek;
+    public int getMotorka() {
+        return motorka;
     }
 
     public int getLego() {
@@ -53,8 +53,8 @@ public class ZenaForm {
         return hory;
     }
 
-    public int getJava() {
-        return java;
+    public int getCpp() {
+        return cpp;
     }
 
     public int getSrdce() {
@@ -81,12 +81,12 @@ public class ZenaForm {
         return vyska;
     }
 
-    public void setBarvaOci(int barvaOci) {
-        this.barvaOci = barvaOci;
+    public void setBarvaAuta(int barvaAuta) {
+        this.barvaAuta = barvaAuta;
     }
 
-    public int getBarvaOci() {
-        return barvaOci;
+    public int getBarvaAuta() {
+        return barvaAuta;
     }
 
     public void setJmeno(String jmeno) {
@@ -106,21 +106,3 @@ public class ZenaForm {
     }
 }
 
-
-
-//    private int[]  velbloudi;
-//
-//    public int[] getVelbloudi() {
-//        return velbloudi;
-//    }
-//
-//    public void setVelbloudi(int[] velbloudi) {
-//        this.velbloudi = velbloudi;
-//    }
-//
-//Hlavni controller:
-
-//for (int item : vstup.getVelbloudi()) {
-//        //seznamOdpovedi.add(item);
-//        System.out.println(item);
-//        }
