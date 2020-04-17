@@ -9,7 +9,7 @@
     <meta name="robots" content="index, follow"/>
     <meta name="keywords" content="java, web"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <title>Kočka nebo pes?</title>
+    <title>Velbloudí kalkulačka</title>
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i|Raleway:400,400i,700,700i&amp;subset=latin-ext"
           rel="stylesheet"/>
     <link rel="stylesheet" href="../static/css/bootstrap.min.css" th:href="${'css/bootstrap.min.css'}"/>
@@ -23,23 +23,26 @@
 
 <div class="container">
     <div class="jumbotron">
-        <br>
-        <h2>Výsledek testu</h2>
-        <br>
 
-        <p class="text-warning"><span th:text="${jmeno}"></span> má cenu <span th:text="${velbloudi}">7</span> velbloudů</p>
+        <h2>Výsledek testu</h2>
+
+        <h2 class="text-success"><span th:text="${jmeno}"></span> má cenu <span th:text="${velbloudi}">7</span> velbloudů</h2>
 
         <img src="images/velbloudi.jpg" class="obrazek_kocka_pes" alt="velbloudi">
 
+        <a th:href="@{'/'}" href="index.html"
+           class="btn btn-outline-info">Počítat velbloudy ještě jednou</a>
 
+
+    </div>
         <footer class="paticka">
-            <br>
+
             <div>
         <p th:insert="fragments/footer :: footer">Footer</p>
     </div>
 
     </footer>
-</div>
+
 </div>
 </body>
 </html>

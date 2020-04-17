@@ -82,6 +82,7 @@ hr {
 }
 
 h1, h2, h3, h4, h5, h6 {
+
     margin-top: 10px;
     margin-bottom: 15px
 }
@@ -335,7 +336,8 @@ template {
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-    margin-bottom: 0.5rem;
+    margin-bottom: 2rem;
+    margin-top: 3rem;
     font-weight: 500;
     line-height: 1.2
 }
@@ -12311,6 +12313,7 @@ select[multiple], select.form-control[multiple] {
     margin-right: auto;
     width: 70%;
     padding: 15px;
+    margin-bottom: 3rem;
 }
 
 table.center {
@@ -12374,4 +12377,9 @@ input[type='radio'] { transform: scale(2);
     border-radius: 50%;
     background: #4CAF50;
     cursor: pointer;
+}
+
+div.big_block {
+    height: 500px
+
 }
